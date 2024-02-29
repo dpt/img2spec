@@ -7,7 +7,7 @@ public:
 	bool mRounded;
 	int mOnce;
 
-	virtual char *getname() { return "MinMax"; }
+	virtual const char *getname() { return "MinMax"; }
 
 
 	virtual void serialize(JSON_Object * root)

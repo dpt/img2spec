@@ -4,7 +4,7 @@ public:
 
 	int mOptTileType;
 
-	virtual char *getname() { return "ZXHalfTile"; }
+	virtual const char *getname() { return "ZXHalfTile"; }
 
 
 	ZXHalfTileDevice() 

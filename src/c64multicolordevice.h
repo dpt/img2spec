@@ -3,7 +3,7 @@ class C64MulticolorDevice : public C64HiresDevice
 {
 public:
 
-	virtual char *getname() { return "C64Multicolor"; }
+	virtual const char *getname() { return "C64Multicolor"; }
 
 
 	C64MulticolorDevice()

@@ -28,7 +28,7 @@ public:
 	int mOptWidthCells;
 	int mOptHeightCells;
 
-	virtual char *getname() { return "C64Hires"; }
+	virtual const char *getname() { return "C64Hires"; }
 
 
 	// Spectrum format data

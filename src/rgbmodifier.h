@@ -4,7 +4,7 @@ public:
 	float mR, mG, mB;
 	int mOnce;
 
-	virtual char *getname() { return "RGB"; }
+	virtual const char *getname() { return "RGB"; }
 
 
 	virtual void serialize(JSON_Object * root)

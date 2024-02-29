@@ -5,7 +5,7 @@ public:
 	float mThreshold;
 	int mOnce;
 
-	virtual char *getname() { return "Superblack"; }
+	virtual const char *getname() { return "Superblack"; }
 
 
 	virtual void serialize(JSON_Object * root)

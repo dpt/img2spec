@@ -18,5 +18,5 @@ public:
 	virtual void zoomed(int aWhich) = 0;
 	virtual void writeOptions(JSON_Object *root) = 0;
 	virtual void readOptions(JSON_Object *root) = 0;
-	virtual char *getname() = 0;
+	virtual const char *getname() = 0;
 };

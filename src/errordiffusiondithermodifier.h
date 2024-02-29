@@ -7,7 +7,7 @@ public:
 	int mOnce;
 	float mErrorClamp;
 
-	virtual char *getname() { return "ErrorDiffusionDither"; }
+	virtual const char *getname() { return "ErrorDiffusionDither"; }
 
 
 	virtual void serialize(JSON_Object * root)

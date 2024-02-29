@@ -6,7 +6,7 @@ public:
 	bool mNegate;
 	int mOnce;
 
-	virtual char *getname() { return "Blur"; }
+	virtual const char *getname() { return "Blur"; }
 
 
 	virtual void serialize(JSON_Object * root)

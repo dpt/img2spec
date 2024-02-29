@@ -420,7 +420,7 @@ void loadworkspace(char *aFilename = nullptr)
 
 				int number = 0;
 				char path[256];
-				sprintf(path, "Stack.Item[%d]", number);
+				snprintf(path, sizeof(path), "Stack.Item[%d]", number);
 				JSON_Object *item = json_object_dotget_object(root, path);
 
 				while (item)
@@ -457,7 +457,7 @@ void loadworkspace(char *aFilename = nullptr)
 						n->deserialize(item);
 					}
 					number++;
-					sprintf(path, "Stack.Item[%d]", number);
+					snprintf(path, sizeof(path), "Stack.Item[%d]", number);
 					item = json_object_dotget_object(root, path);
 				}
 			}
@@ -508,11 +508,11 @@ void saveworkspace()
 		while (walker)
 		{
 			char path[256];
-			sprintf(path, "Stack.Item[%d]", number);
+			snprintf(path, sizeof(path), "Stack.Item[%d]", number);
 			char temp[256];
-			sprintf(temp, "%s.Name", path);
+			snprintf(temp, sizeof(temp), "%s.Name", path);
 			json_object_dotset_string(root, temp, walker->getname());
-			sprintf(temp, "%s.Type", path);
+			snprintf(temp, sizeof(temp), "%s.Type", path);
 			json_object_dotset_number(root, temp, walker->gettype());
 			JSON_Object *item = json_object_dotget_object(root, path);
 			walker->serialize_common(item);

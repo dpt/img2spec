@@ -6,7 +6,7 @@ public:
 	float mScale;
 	int mOnce;
 
-	virtual char *getname() { return "ScalePos"; }
+	virtual const char *getname() { return "ScalePos"; }
 
 
 	virtual void serialize(JSON_Object * root)

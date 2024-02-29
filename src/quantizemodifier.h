@@ -9,7 +9,7 @@ public:
 	float mRange;
 	int mOnce;
 
-	virtual char *getname() { return "Quantize"; }
+	virtual const char *getname() { return "Quantize"; }
 
 
 	virtual void serialize(JSON_Object * root)

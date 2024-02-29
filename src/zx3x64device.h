@@ -2,7 +2,7 @@ class ZX3x64Device : public ZXSpectrumDevice
 {
 public:
 
-	virtual char *getname() { return "ZX3x64"; }
+	virtual const char *getname() { return "ZX3x64"; }
 
 	virtual int estimate_rgb(int c)
 	{

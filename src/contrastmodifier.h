@@ -5,7 +5,7 @@ public:
 	float mC, mB, mP;
 	int mOnce;
 
-	virtual char *getname() { return "Contrast"; }
+	virtual const char *getname() { return "Contrast"; }
 
 
 	virtual void serialize(JSON_Object * root)

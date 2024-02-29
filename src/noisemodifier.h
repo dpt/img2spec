@@ -6,7 +6,7 @@ public:
 	bool mColornoise;
 	int mOnce;
 
-	virtual char *getname() { return "NoiseModifier"; }
+	virtual const char *getname() { return "NoiseModifier"; }
 
 
 	virtual void serialize(JSON_Object * root)

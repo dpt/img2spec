@@ -39,16 +39,16 @@ public:
 		return ret;
 	}
 
-	static int complexsliderfloat(char *aName, float *aValue, float aX0, float aX1, float aReset, float aNudge)
+	static int complexsliderfloat(const char *aName, float *aValue, float aX0, float aX1, float aReset, float aNudge)
 	{
 		char buttonstring[256];
 		char resetstring[256];
 		char plusstring[256];
 		char minusstring[256];
-		sprintf(buttonstring, "##%s", aName);
-		sprintf(resetstring, "Reset##%s", aName);
-		sprintf(minusstring, "-##%s", aName);
-		sprintf(plusstring, "+##%s", aName);
+		snprintf(buttonstring, sizeof(buttonstring), "##%s", aName);
+		snprintf(resetstring, sizeof(resetstring), "Reset##%s", aName);
+		snprintf(minusstring, sizeof(minusstring), "-##%s", aName);
+		snprintf(plusstring, sizeof(plusstring), "+##%s", aName);
 		int modified = 0;
 
 		if (ImGui::SliderFloat(buttonstring, aValue, aX0, aX1)) { modified = 1; }	ImGui::SameLine();
@@ -62,16 +62,16 @@ public:
 		return modified;
 	}
 
-	static int complexsliderint(char *aName, int *aValue, int aX0, int aX1, int aReset, int aNudge)
+	static int complexsliderint(const char *aName, int *aValue, int aX0, int aX1, int aReset, int aNudge)
 	{
 		char buttonstring[256];
 		char resetstring[256];
 		char plusstring[256];
 		char minusstring[256];
-		sprintf(buttonstring, "##%s", aName);
-		sprintf(resetstring, "Reset##%s", aName);
-		sprintf(minusstring, "-##%s", aName);
-		sprintf(plusstring, "+##%s", aName);
+		snprintf(buttonstring, sizeof(buttonstring), "##%s", aName);
+		snprintf(resetstring, sizeof(resetstring), "Reset##%s", aName);
+		snprintf(minusstring, sizeof(minusstring), "-##%s", aName);
+		snprintf(plusstring, sizeof(plusstring), "+##%s", aName);
 		int modified = 0;
 
 		if (ImGui::SliderInt(buttonstring, aValue, aX0, aX1)) { modified = 1; }	ImGui::SameLine();
@@ -108,5 +108,5 @@ public:
 #pragma warning(default:4244; default:4800)
 	}
 	virtual int gettype() = 0;
-	virtual char *getname() = 0;
+	virtual const char *getname() = 0;
 };

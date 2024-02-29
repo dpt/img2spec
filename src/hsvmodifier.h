@@ -5,7 +5,7 @@ public:
 	float mH, mS, mV;
 	int mOnce;
 
-	virtual char *getname() { return "HSV"; }
+	virtual const char *getname() { return "HSV"; }
 
 
 	virtual void serialize(JSON_Object * root)

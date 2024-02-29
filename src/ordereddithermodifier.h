@@ -6,7 +6,7 @@ public:
 	int mXOfs, mYOfs;
 	int mMatrix;
 
-	virtual char *getname() { return "OrderedDither"; }
+	virtual const char *getname() { return "OrderedDither"; }
 
 
 	virtual void serialize(JSON_Object * root)

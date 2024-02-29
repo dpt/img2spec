@@ -39,7 +39,7 @@ public:
 	int mOptEmptyCellInkColor;
 	float mOptPivotBias;
 
-	virtual char *getname() { return "ZXSpectrum"; }
+	virtual const char *getname() { return "ZXSpectrum"; }
 
 
 	// Spectrum format data

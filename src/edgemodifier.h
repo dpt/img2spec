@@ -10,7 +10,7 @@ public:
 	float mDirection;
 	int mOnce;
 
-	virtual char *getname() { return "Edge"; }
+	virtual const char *getname() { return "Edge"; }
 
 
 	virtual void serialize(JSON_Object *root)
